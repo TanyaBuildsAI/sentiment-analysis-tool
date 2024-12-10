@@ -1,23 +1,29 @@
 from transformers import pipeline
 
-# Load HuggingFace pre-trained sentiment analysis model and specifiy model explicitly
+# Specify the model explicitly
 model_name = "distilbert-base-uncased-finetuned-sst-2-english"
 sentiment_analyzer = pipeline("sentiment-analysis", model=model_name)
 
-# Step 1: Read input sentences from a file
+# File paths
 input_file = "input.txt"
 output_file = "output.txt"
 
+# Batch size (number of inputs to process at a time)
+batch_size = 10
+
+# Read input sentences from the file
 with open(input_file, "r") as file:
-    texts = file.readlines()
+    texts = [line.strip() for line in file.readlines()]
 
-# Step 2: Analyze sentiment for each sentence
-results = sentiment_analyzer([text.strip() for text in texts])
+# Divide inputs into batches
+batches = [texts[i:i + batch_size] for i in range(0, len(texts), batch_size)]
 
-# Step 3: Write results to an output file
+# Process each batch and write results to the output file
 with open(output_file, "w") as file:
-    for text, result in zip(texts, results):
-        file.write(f"Text: {text.strip()}\n")
-        file.write(f"Sentiment: {result['label']}, Confidence: {result['score']:.2f}\n\n")
+    for batch in batches:
+        results = sentiment_analyzer(batch)
+        for text, result in zip(batch, results):
+            file.write(f"Text: {text}\n")
+            file.write(f"Sentiment: {result['label']}, Confidence: {result['score']:.2f}\n\n")
 
-print(f"Sentiment analysis results saved to {output_file}")
+print(f"Batch analysis complete. Results saved to {output_file}")
