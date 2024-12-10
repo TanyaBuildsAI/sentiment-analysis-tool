@@ -1,0 +1,9 @@
+Text: I love learning about AI tools!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: This is a terrible idea.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: I feel neutral about this project.
+Sentiment: NEGATIVE, Confidence: 1.00
+
