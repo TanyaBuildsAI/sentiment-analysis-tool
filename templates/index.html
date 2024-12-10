@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentiment Analysis</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Sentiment Analysis Tool</h1>
+    <!-- Text input form -->
     <form action="/analyze" method="post">
         <textarea name="text" rows="5" cols="50" placeholder="Enter your text here"></textarea><br>
         <button type="submit">Analyze Sentiment</button>
     </form>
+    <br>
+    <!-- File upload form -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br>
+        <button type="submit">Upload File</button>
+    </form>
 </body>
 </html>
+
