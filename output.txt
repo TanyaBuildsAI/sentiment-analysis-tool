@@ -1,5 +1,5 @@
-Text: I love learning about AI tools!
-Sentiment: POSITIVE, Confidence: 1.00
+Text: This is text line designed to test the maximum character limit in the sentiment analysis tool. The purpose of this line is to exceed 512 characters so that we can ensure that the tool appropriately truncates text to avoid errors or performance issues. This line keeps going and going, adding more and more words to ensure that the length is sufficient to test the limit. It’s important for the tool to handle such cases gracefully, especially when working with large datasets where long entries might be common. 
+Sentiment: POSITIVE, Confidence: 0.99
 
 Text: This is a terrible idea.
 Sentiment: NEGATIVE, Confidence: 1.00
