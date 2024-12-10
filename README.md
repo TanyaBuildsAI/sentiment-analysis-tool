@@ -3,8 +3,8 @@ This tool analyzes the sentiment (positive, negative, or neutral) of text inputs
 
 ### Features
 - Analyze sentiment of individual or multiple sentences.
-- Supports **batch processing** for large datasets.
-- Command-line arguments for flexible input/output file handling.
+- **File Upload**: Upload text files for batch sentiment analysis.
+- **Table Display**: Results are displayed in a clean, readable table.
 - Handles edge cases:
   - Blank lines in input files are ignored.
   - Long text inputs are truncated to 512 characters.
@@ -19,13 +19,17 @@ This tool analyzes the sentiment (positive, negative, or neutral) of text inputs
 ---
 
 #### Usage
-- To run the tool, use the following command:
-  - python sentiment_analysis.py <input_file> <output_file>
-    - <input_file>: Path to the file containing text inputs (one sentence per line).
-    - <output_file>: Path to the file where the results will be saved.
-- Example:
-  - python sentiment_analysis.py reviews.txt results.txt
-  - The results will be saved in results.txt with sentiment labels and confidence scores for each input.
+#### Single Text Input
+To analyze a single text input, use the form on the home page:
+1. Enter your text in the provided text area.
+2. Click "Analyze Sentiment."
+3. View the sentiment and confidence score directly on the page.
+#### File Upload
+To analyze multiple lines of text:
+1. Use the "Upload File" form on the home page.
+2. Upload a plain text file (`.txt`) with one sentence per line.
+3. Click "Upload File."
+4. Results will be displayed in a table, showing the sentiment and confidence score for each line.
 ---
 
 #### Demo
