@@ -1,0 +1,9 @@
+Text: This is a very long sentence designed to test the edge case handling capabilities of the sentiment analysis tool. It should be truncated to ensure it does not exceed the model's maximum input size, which is set to 512 characters. Testing edge cases like this ensures the tool can gracefully handle unexpected inputs and avoids errors or degraded performance that might occur with overly long text. Let's keep adding to this sentence to make it really long and challenging for the tool to process. This should now
+Sentiment: NEGATIVE, Confidence: 0.99
+
+Text: This tool works perfectly for my needs!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: Why does this feature not work at all? It's so frustrating!
+Sentiment: NEGATIVE, Confidence: 1.00
+

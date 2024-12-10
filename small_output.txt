@@ -1,0 +1,9 @@
+Text: I absolutely love this product!
+Sentiment: POSITIVE, Confidence: 1.00
+
+Text: The service was disappointing and slow.
+Sentiment: NEGATIVE, Confidence: 1.00
+
+Text: Overall, I'm satisfied with my experience.
+Sentiment: POSITIVE, Confidence: 1.00
+

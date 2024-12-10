@@ -1,12 +1,15 @@
+import sys
+
+
 from transformers import pipeline
 
 # Specify the model explicitly
 model_name = "distilbert-base-uncased-finetuned-sst-2-english"
 sentiment_analyzer = pipeline("sentiment-analysis", model=model_name)
 
-# File paths
-input_file = "longtextline.txt"
-output_file = "output.txt"
+# File paths from command-line arguments
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 
 # Batch size (number of inputs to process at a time)
 batch_size = 10
